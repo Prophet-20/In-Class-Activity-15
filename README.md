@@ -1,8 +1,6 @@
 # In-Class Activity 15: Trivia Showdown
 
-A Flutter quiz that fetches five live questions, gives instant answer feedback, and shows a final score with a simulated sync. Built from the instructor's `starter_code.dart` for [Activity 15](https://codd.cs.gsu.edu/~lhenry23/mad/ica/act15/index.html).
-
-[GitHub repository](https://github.com/Prophet-20/In-Class-Activity-15)
+A Flutter quiz that fetches five live questions, gives instant answer feedback, and shows a final score with a simulated sync.
 
 ## Run it
 
