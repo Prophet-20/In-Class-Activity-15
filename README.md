@@ -37,6 +37,3 @@ Changes to the starter include retry/error reset, five-question validation, scro
 
 - [Evidence](EVIDENCE.md): 11 labeled screenshots, including a full live Safari round and clearly identified controlled loading/error captures.
 - [Validation](VALIDATION.md): checks, reproduction details, and limitations.
-- [LMS summary draft](SUBMISSION_DRAFT.md): ready to review before submission.
-
-No LMS submission has been made. The activity page does not require an APK or separate reflection document unless the instructor or LMS asks for one.
