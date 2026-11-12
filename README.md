@@ -23,20 +23,6 @@ For Safari, run `flutter run -d web-server` and open the local URL it prints.
 
 **Score sync is a simulation.** No instructor endpoint was provided. The action waits one second and displays JSON containing the score, total questions, and a UTC timestamp. It sends no backend request and saves nothing online.
 
-## Critical thinking
-
-### If connectivity drops after questions load
-
-The player can finish the round because all five questions and answers are already in `_questions`. Answering and moving between questions happen locally, so the quiz should stay visible. The app does not monitor connectivity or display an offline banner.
-
-If the connection fails during a request, the loading state ends in an error or timeout with **Try Again**. **Play Again** clears the old round and requests new questions, so it also reaches an error without connectivity. A possible improvement would offer a clearly labeled replay of the previous questions after a failed refresh. That fallback is a proposal, not an implemented feature. Simulated sync works locally, but its confirmation still does not mean the score was saved online.
-
-### Something worth saving locally
-
-A personal best score would give players a goal that survives an app restart. A small preferences record could store the score, total questions, and quiz settings so results from different difficulties or round lengths are not compared accidentally.
-
-The label should say **Personal best on this device**. Local storage cannot create a shared leaderboard: it does not send scores to a common server or compare players across devices, and local records can be changed or cleared. A useful test would finish a round, restart the app, and check that the best score returns with the device-only label and matching settings. Local storage is a design proposal here; it has not been implemented.
-
 ## API bridge and development notes
 
 GET retrieves the questions. HTTP status checks and the API response code answer different questions: whether the HTTP request succeeded and whether the trivia service returned usable results. JSON mapping then supplies the UI, while local state controls feedback and scoring. A round identifier prevents an older asynchronous operation from changing a new round.
